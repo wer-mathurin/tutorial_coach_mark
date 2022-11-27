@@ -5,7 +5,7 @@ import 'package:tutorial_coach_mark/src/target/target_position.dart';
 enum ShapeLightFocus { Circle, RRect }
 
 TargetPosition? getTargetCurrent(TargetFocus target) {
-  if (target.keyTarget != null) {
+  if (target.keyTarget != null && target.keyTarget?.currentContext != null) {
     var key = target.keyTarget!;
 
     try {
